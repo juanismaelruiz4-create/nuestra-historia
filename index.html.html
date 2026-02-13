@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ismael ❤️ Brisa</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ff9ecf,#ff4fa3);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+padding:20px;
+}
+
+.hidden{
+display:none;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4fa3;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+img{
+width:90%;
+max-width:350px;
+border-radius:20px;
+margin-top:15px;
+box-shadow:0 0 25px rgba(255,255,255,0.6);
+}
+
+.card{
+margin-top:30px;
+animation:fade 1.5s ease-in-out;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.hearts span{
+position:absolute;
+color:#fff;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Música -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/LSYUfCCsTpE?autoplay=1&loop=1&playlist=LSYUfCCsTpE"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+<div class="hearts">
+<span style="left:10%">❤️</span>
+<span style="left:30%">🥰</span>
+<span style="left:50%">💖</span>
+<span style="left:70%">💘</span>
+<span style="left:90%">💕</span>
+</div>
+
+<!-- LOGIN -->
+<div class="container" id="login">
+<h1>Ismael ❤️ Brisa</h1>
+<img src="TU_FOTO_AQUI.jpg">
+<br>
+<button onclick="entrar()">Entrar Mi Amor 💕</button>
+</div>
+
+<!-- CONTENIDO -->
+<div class="container hidden" id="contenido">
+
+<div class="card">
+<h2>Nuestra primera foto</h2>
+<img src="FOTO1.jpg">
+<p>Eres lo más bonito que me pasó 😍🥹</p>
+</div>
+
+<div class="card">
+<h2>Conociendo a mis suegros</h2>
+<img src="FOTO2.jpg">
+<p>Estábamos muy nerviosos 🤭</p>
+</div>
+
+<div class="card">
+<h2>Eres mi todo 🥹🌎❤️</h2>
+<img src="FOTO3.jpg">
+<p>Gracias por ser mi lugar seguro. Siempre estaré aquí para sostener tu mano, en las buenas y en las malas.</p>
+</div>
+
+<div class="card">
+<h2>Te amo ❤️🥹</h2>
+<img src="FOTO4.jpg">
+<p>Eres la casualidad más bonita que me pasó, y cada día a tu lado es una bendición. Te amo 🫂❤️</p>
+</div>
+
+<div class="card">
+<h2>💌 Carta para ti 💌</h2>
+<p style="padding:15px; background:rgba(255,255,255,0.2); border-radius:20px;">
+¡Hola mi Bebé! 💕<br><br>
+
+Primero que nada, quiero que me perdones por todos los errores y malos momentos que te hice pasar.  
+Quiero que sepas que eres lo mejor que me pasó, eres una persona increíble, muy hermosa, talentosa, inteligente y con miles de cualidades que te hacen perfecta.  
+
+Te escribo esto para que sepas que estoy aquí para apoyarte, cuidarte y darte todo de mí.  
+Eres mi paz, mi alegría, mi fuerza y mi mayor bendición.  
+
+Prometo aprender, mejorar y hacerte sentir amada todos los días de mi vida.  
+
+Te amo con todo mi corazón ❤️  
+
+¡Gracias por estar a mi lado!  
+Te amo mi amor, Amorchi 🤭🥰
+</p>
+</div>
+
+</div>
+
+<script>
+function entrar(){
+document.getElementById("login").classList.add("hidden");
+document.getElementById("contenido").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
