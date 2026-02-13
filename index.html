@@ -7,17 +7,6 @@
 
 <style>
 body{
-<script>
-var password = "2512";  
-var userInput = prompt("Ingresa la contraseña para acceder:");
-
-if (userInput !== password) {
-    alert("Contraseña incorrecta");
-    window.location = "https://google.com";
-}
-</script>
-
-<div class="container">
 margin:0;
 font-family:'Segoe UI', sans-serif;
 background: linear-gradient(135deg,#ff9ecf,#ff4fa3);
@@ -94,6 +83,17 @@ to{transform:translateY(-10vh);}
 </head>
 
 <body>
+
+<!-- 🔐 CONTRASEÑA -->
+<script>
+var password = "2512";
+var userInput = prompt("Ingresa la contraseña para acceder:");
+
+if (userInput !== password) {
+    alert("Contraseña incorrecta");
+    window.location = "https://google.com";
+}
+</script>
 
 <!-- Música -->
 <iframe width="0" height="0"
@@ -176,7 +176,3 @@ document.getElementById("contenido").classList.remove("hidden");
 
 </body>
 </html>
-
-
-
-
