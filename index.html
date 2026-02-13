@@ -1,255 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ismael ❤️ Brisa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ismael ❤️ Brisa</title>
 
-<style>
-/* =========================
-   VARIABLES
-========================= */
-:root {
-  --rosa1: #ff9ecf;
-  --rosa2: #ff4fa3;
-  --blanco: #ffffff;
-}
+  <style>
+  /* =================================================
+     VARIABLES
+  ================================================= */
+  :root {
+    --color-rosa-claro: #ff9ecf;
+    --color-rosa-fuerte: #ff4fa3;
+    --color-blanco: #ffffff;
+  }
 
-/* =========================
-   BASE
-========================= */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, var(--rosa1), var(--rosa2));
-  color: white;
-  text-align: center;
-}
+  /* =================================================
+     RESET Y BASE
+  ================================================= */
+  * {
+    box-sizing: border-box;
+  }
 
-/* =========================
-   CONTENEDORES
-========================= */
-.container {
-  padding: 20px;
-}
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(
+      135deg,
+      var(--color-rosa-claro),
+      var(--color-rosa-fuerte)
+    );
+    color: var(--color-blanco);
+    text-align: center;
+  }
 
-.hidden {
-  display: none;
-}
+  img {
+    max-width: 100%;
+    display: block;
+  }
 
-/* =========================
-   TARJETAS
-========================= */
-.card {
-  margin: 30px auto;
-  max-width: 400px;
-  animation: fade 1.2s ease;
-}
+  /* =================================================
+     UTILIDADES
+  ================================================= */
+  .hidden {
+    display: none;
+  }
 
-.card img {
-  width: 90%;
-  max-width: 350px;
-  border-radius: 20px;
-  margin-top: 15px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-}
+  .container {
+    padding: 20px;
+  }
 
-/* =========================
-   BOTONES
-========================= */
-.btn {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 25px;
-  background: white;
-  color: var(--rosa2);
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: 0.3s;
-}
+  /* =================================================
+     LOGIN
+  ================================================= */
+  .login {
+    max-width: 350px;
+    margin: 100px auto;
+  }
 
-.btn:hover {
-  transform: scale(1.05);
-}
+  .login img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 15px auto;
+  }
 
-/* =========================
-   LOGIN
-========================= */
-.login-box {
-  max-width: 350px;
-  margin: 100px auto;
-}
+  .input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    margin-top: 10px;
+  }
 
-input {
-  padding: 12px;
-  width: 80%;
-  border: none;
-  border-radius: 15px;
-  margin-top: 10px;
-  text-align: center;
-}
+  /* =================================================
+     BOTONES
+  ================================================= */
+  .btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: var(--color-blanco);
+    color: var(--color-rosa-fuerte);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+  }
 
-/* =========================
-   CORAZONES
-========================= */
-.hearts {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
+  .btn:hover {
+    transform: scale(1.05);
+  }
 
-.hearts span {
-  position: absolute;
-  font-size: 20px;
-  animation: float 6s linear infinite;
-}
+  /* =================================================
+     TARJETAS
+  ================================================= */
+  .card {
+    max-width: 400px;
+    margin: 30px auto;
+    animation: fadeIn 1.2s ease;
+  }
 
-@keyframes float {
-  from { transform: translateY(100vh); }
-  to { transform: translateY(-10vh); }
-}
+  .card img {
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  }
 
-@keyframes fade {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  /* =================================================
+     CARTA
+  ================================================= */
+  .letter {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 1.6;
+  }
 
-/* =========================
-   CARTA
-========================= */
-.letter {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 20px;
-  line-height: 1.6;
-}
-</style>
+  /* =================================================
+     CORAZONES ANIMADOS
+  ================================================= */
+  .hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .hearts span {
+    position: absolute;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+  }
+
+  @keyframes float {
+    from { transform: translateY(100vh); }
+    to   { transform: translateY(-10vh); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  </style>
 </head>
 
 <body>
 
-<!-- Música -->
-<iframe width="0" height="0"
-src="https://www.youtube.com/embed/LSYUfCCsTpE?autoplay=1&loop=1&playlist=LSYUfCCsTpE"
-frameborder="0"
-allow="autoplay">
-</iframe>
+  <!-- Música -->
+  <iframe
+    width="0"
+    height="0"
+    src="https://www.youtube.com/embed/LSYUfCCsTpE?autoplay=1&loop=1&playlist=LSYUfCCsTpE"
+    allow="autoplay">
+  </iframe>
 
-<!-- Corazones -->
-<div class="hearts">
-  <span style="left:10%">❤️</span>
-  <span style="left:30%">💖</span>
-  <span style="left:50%">💕</span>
-  <span style="left:70%">💘</span>
-  <span style="left:90%">🥰</span>
-</div>
+  <!-- Corazones flotando -->
+  <div class="hearts">
+    <span style="left:10%">❤️</span>
+    <span style="left:30%">💖</span>
+    <span style="left:50%">💕</span>
+    <span style="left:70%">💘</span>
+    <span style="left:90%">🥰</span>
+  </div>
 
-<!-- LOGIN -->
-<section class="login-box" id="login">
-  <h1>Ismael ❤️ Brisa</h1>
-  <img src="foto_login.jpg" width="200" style="border-radius:50%;">
-  <br>
-  <input
-    type="password"
-    id="password"
-    placeholder="Ingresa la contraseña"
-  >
-  <br>
-  <button class="btn" id="loginBtn">Entrar mi amor 💕</button>
-</section>
-
-<!-- CONTENIDO -->
-<main class="container hidden" id="contenido">
-
-  <section class="card">
-    <h2>Nuestra primera foto</h2>
-    <img src="foto1.jpg" alt="Primera foto juntos">
-    <p>Eres lo más bonito que me pasó 😍🥹</p>
+  <!-- LOGIN -->
+  <section class="login" id="loginSection">
+    <h1>Ismael ❤️ Brisa</h1>
+    <img src="foto_login.jpg" alt="Foto principal">
+    <input
+      type="password"
+      id="passwordInput"
+      class="input"
+      placeholder="Ingresa la contraseña"
+    >
+    <br>
+    <button class="btn" id="loginButton">
+      Entrar mi amor 💕
+    </button>
   </section>
 
-  <section class="card">
-    <h2>Conociendo a mis suegros</h2>
-    <img src="foto2.jpg" alt="Conociendo a los suegros">
-    <p>Estábamos muy nerviosos 🤭</p>
-  </section>
+  <!-- CONTENIDO -->
+  <main class="container hidden" id="mainContent">
 
-  <section class="card">
-    <h2>Eres mi todo 🥹🌎❤️</h2>
-    <img src="foto3.jpg" alt="Momento especial">
-    <p>Gracias por ser mi lugar seguro. Siempre estaré aquí para sostener tu mano.</p>
-  </section>
+    <section class="card">
+      <h2>Nuestra primera foto</h2>
+      <img src="foto1.jpg" alt="Primera foto juntos">
+      <p>Eres lo más bonito que me pasó 😍🥹</p>
+    </section>
 
-  <section class="card">
-    <h2>Te amo ❤️🥹</h2>
-    <img src="foto4.jpg" alt="Foto romántica">
-    <p>Eres la casualidad más bonita que me pasó. Te amo 🫂❤️</p>
-  </section>
+    <section class="card">
+      <h2>Conociendo a mis suegros</h2>
+      <img src="foto2.jpg" alt="Conociendo a los suegros">
+      <p>Estábamos muy nerviosos 🤭</p>
+    </section>
 
-  <section class="card letter">
-    <h2>💌 Carta para ti</h2>
-    <p>
-      ¡Hola mi Bebé! 💕<br><br>
-      Perdón por todos los errores que cometí.  
-      Eres una persona increíble, hermosa, inteligente y llena de cualidades.<br><br>
+    <section class="card">
+      <h2>Eres mi todo 🥹🌎❤️</h2>
+      <img src="foto3.jpg" alt="Momento especial">
+      <p>Gracias por ser mi lugar seguro. Siempre estaré aquí para sostener tu mano.</p>
+    </section>
 
-      Estoy aquí para apoyarte, cuidarte y darte todo de mí.  
-      Eres mi paz, mi alegría y mi mayor bendición.<br><br>
+    <section class="card">
+      <h2>Te amo ❤️🥹</h2>
+      <img src="foto4.jpg" alt="Foto romántica">
+      <p>Eres la casualidad más bonita que me pasó. Te amo 🫂❤️</p>
+    </section>
 
-      Prometo mejorar y hacerte sentir amada todos los días.<br><br>
+    <section class="card letter">
+      <h2>💌 Carta para ti</h2>
+      <p>
+        ¡Hola mi Bebé! 💕<br><br>
+        Perdón por todos los errores que cometí.<br><br>
+        Eres mi paz, mi alegría y mi mayor bendición.<br><br>
+        Prometo mejorar cada día por nosotros.<br><br>
+        Te amo con todo mi corazón ❤️
+      </p>
+    </section>
 
-      Te amo con todo mi corazón ❤️
-    </p>
-  </section>
+  </main>
 
-</main>
+  <!-- SCRIPT -->
+  <script>
+    const PASSWORD = "2512";
 
-<script>
-/* =========================
-   CONFIGURACIÓN
-========================= */
-const PASSWORD = "2512";
+    const loginSection = document.getElementById("loginSection");
+    const mainContent = document.getElementById("mainContent");
+    const passwordInput = document.getElementById("passwordInput");
+    const loginButton = document.getElementById("loginButton");
 
-/* =========================
-   ELEMENTOS
-========================= */
-const loginBox = document.getElementById("login");
-const contenido = document.getElementById("contenido");
-const passwordInput = document.getElementById("password");
-const loginBtn = document.getElementById("loginBtn");
+    function login() {
+      const value = passwordInput.value.trim();
 
-/* =========================
-   FUNCIONES
-========================= */
-function verificarPassword() {
-  const input = passwordInput.value.trim();
+      if (value === PASSWORD) {
+        loginSection.classList.add("hidden");
+        mainContent.classList.remove("hidden");
+      } else {
+        alert("Contraseña incorrecta 💔");
+        passwordInput.value = "";
+        passwordInput.focus();
+      }
+    }
 
-  if (input === PASSWORD) {
-    loginBox.classList.add("hidden");
-    contenido.classList.remove("hidden");
-  } else {
-    alert("Contraseña incorrecta");
-    passwordInput.value = "";
-    passwordInput.focus();
-  }
-}
+    loginButton.addEventListener("click", login);
 
-/* =========================
-   EVENTOS
-========================= */
-loginBtn.addEventListener("click", verificarPassword);
-
-passwordInput.addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
-    verificarPassword();
-  }
-});
-</script>
+    passwordInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        login();
+      }
+    });
+  </script>
 
 </body>
 </html>
