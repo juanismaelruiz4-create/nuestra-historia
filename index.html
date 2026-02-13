@@ -6,94 +6,115 @@
 <title>Ismael ❤️ Brisa</title>
 
 <style>
-body{
-margin:0;
-font-family:'Segoe UI', sans-serif;
-background: linear-gradient(135deg,#ff9ecf,#ff4fa3);
-color:white;
-text-align:center;
-overflow-x:hidden;
+:root{
+  --rosa1:#ff9ecf;
+  --rosa2:#ff4fa3;
+  --blanco: #ffffff;
 }
 
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,var(--rosa1),var(--rosa2));
+  color:white;
+  text-align:center;
+}
+
+/* CONTENEDORES */
 .container{
-padding:20px;
+  padding:20px;
 }
 
 .hidden{
-display:none;
+  display:none;
 }
 
+/* TARJETAS */
+.card{
+  margin:30px auto;
+  max-width:400px;
+  animation:fade 1.2s ease;
+}
+
+.card img{
+  width:90%;
+  max-width:350px;
+  border-radius:20px;
+  margin-top:15px;
+  box-shadow:0 0 25px rgba(255,255,255,0.6);
+}
+
+/* BOTONES */
 button{
-padding:12px 25px;
-border:none;
-border-radius:25px;
-background:white;
-color:#ff4fa3;
-font-weight:bold;
-font-size:16px;
-cursor:pointer;
-margin-top:20px;
-transition:0.3s;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:white;
+  color:var(--rosa2);
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:15px;
+  transition:0.3s;
 }
 
 button:hover{
-transform:scale(1.1);
+  transform:scale(1.05);
 }
 
-img{
-width:90%;
-max-width:350px;
-border-radius:20px;
-margin-top:15px;
-box-shadow:0 0 25px rgba(255,255,255,0.6);
+/* LOGIN */
+.login-box{
+  max-width:350px;
+  margin:100px auto;
 }
 
-.card{
-margin-top:30px;
-animation:fade 1.5s ease-in-out;
+input{
+  padding:12px;
+  width:80%;
+  border:none;
+  border-radius:15px;
+  margin-top:10px;
+  text-align:center;
 }
 
-@keyframes fade{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
-}
-
+/* CORAZONES */
 .hearts{
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-pointer-events:none;
-overflow:hidden;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  pointer-events:none;
+  overflow:hidden;
 }
 
 .hearts span{
-position:absolute;
-color:#fff;
-font-size:20px;
-animation:float 6s linear infinite;
+  position:absolute;
+  font-size:20px;
+  animation:float 6s linear infinite;
 }
 
 @keyframes float{
-from{transform:translateY(100vh);}
-to{transform:translateY(-10vh);}
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);}
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* CARTA */
+.letter{
+  background:rgba(255,255,255,0.2);
+  padding:20px;
+  border-radius:20px;
+  line-height:1.6;
 }
 </style>
 </head>
 
 <body>
-
-<!-- 🔐 CONTRASEÑA -->
-<script>
-var password = "2512";
-var userInput = prompt("Ingresa la contraseña para acceder:");
-
-if (userInput !== password) {
-    alert("Contraseña incorrecta");
-    window.location = "https://google.com";
-}
-</script>
 
 <!-- Música -->
 <iframe width="0" height="0"
@@ -102,20 +123,23 @@ frameborder="0"
 allow="autoplay">
 </iframe>
 
+<!-- Corazones -->
 <div class="hearts">
 <span style="left:10%">❤️</span>
-<span style="left:30%">🥰</span>
-<span style="left:50%">💖</span>
+<span style="left:30%">💖</span>
+<span style="left:50%">💕</span>
 <span style="left:70%">💘</span>
-<span style="left:90%">💕</span>
+<span style="left:90%">🥰</span>
 </div>
 
 <!-- LOGIN -->
-<div class="container" id="login">
+<div class="login-box" id="login">
 <h1>Ismael ❤️ Brisa</h1>
-<img src="foto_login.jpg">
+<img src="foto_login.jpg" width="200" style="border-radius:50%;">
 <br>
-<button onclick="entrar()">Entrar Mi Amor 💕</button>
+<input type="password" id="password" placeholder="Ingresa la contraseña">
+<br>
+<button onclick="checkPassword()">Entrar mi amor 💕</button>
 </div>
 
 <!-- CONTENIDO -->
@@ -145,22 +169,22 @@ allow="autoplay">
 <p>Eres la casualidad más bonita que me pasó, y cada día a tu lado es una bendición. Te amo 🫂❤️</p>
 </div>
 
-<div class="card">
-<h2>💌 Carta para ti 💌</h2>
-<p style="padding:15px; background:rgba(255,255,255,0.2); border-radius:20px;">
+<div class="card letter">
+<h2>💌 Carta para ti</h2>
+<p>
 ¡Hola mi Bebé! 💕<br><br>
+Primero que nada, quiero que me perdones por todos los errores y malos momentos que te hice pasar.
+Quiero que sepas que eres lo mejor que me pasó, eres una persona increíble, muy hermosa, talentosa,
+inteligente y con miles de cualidades que te hacen perfecta.<br><br>
 
-Primero que nada, quiero que me perdones por todos los errores y malos momentos que te hice pasar.  
-Quiero que sepas que eres lo mejor que me pasó, eres una persona increíble, muy hermosa, talentosa, inteligente y con miles de cualidades que te hacen perfecta.  
+Te escribo esto para que sepas que estoy aquí para apoyarte, cuidarte y darte todo de mí.
+Eres mi paz, mi alegría, mi fuerza y mi mayor bendición.<br><br>
 
-Te escribo esto para que sepas que estoy aquí para apoyarte, cuidarte y darte todo de mí.  
-Eres mi paz, mi alegría, mi fuerza y mi mayor bendición.  
+Prometo aprender, mejorar y hacerte sentir amada todos los días de mi vida.<br><br>
 
-Prometo aprender, mejorar y hacerte sentir amada todos los días de mi vida.  
+Te amo con todo mi corazón ❤️<br><br>
 
-Te amo con todo mi corazón ❤️  
-
-¡Gracias por estar a mi lado!  
+¡Gracias por estar a mi lado!<br>
 Te amo mi amor, Amorchi 🤭🥰
 </p>
 </div>
@@ -168,9 +192,16 @@ Te amo mi amor, Amorchi 🤭🥰
 </div>
 
 <script>
-function entrar(){
-document.getElementById("login").classList.add("hidden");
-document.getElementById("contenido").classList.remove("hidden");
+function checkPassword(){
+  var password = "2512";
+  var input = document.getElementById("password").value;
+
+  if(input === password){
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("contenido").classList.remove("hidden");
+  } else {
+    alert("Contraseña incorrecta");
+  }
 }
 </script>
 
